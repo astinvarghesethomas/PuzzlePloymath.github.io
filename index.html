@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="TurnForge — Speedcubing timer and algorithm trainer">
+  <title>TurnForge | Cube Timer</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="logo" href="#">TURN<span>FORGE</span></a>
+  <div class="account">
+    <span id="accountStatus">Offline mode</span>
+    <button id="accountButton">Account</button>
+  </div>
+</header>
+
+<nav class="navigation">
+  <button class="nav-btn active" data-view="timer">Timer</button>
+  <button class="nav-btn" data-view="statistics">Statistics</button>
+  <button class="nav-btn" data-view="history">History</button>
+  <button class="nav-btn" data-view="algorithms">OLL / PLL</button>
+</nav>
+
+<main>
+
+  <!-- TIMER -->
+  <section id="timer" class="view active">
+
+    <div class="timer-top">
+      <select id="eventSelect">
+        <option value="333">3×3×3</option>
+        <option value="222">2×2×2</option>
+        <option value="444">4×4×4</option>
+        <option value="555">5×5×5</option>
+        <option value="666">6×6×6</option>
+        <option value="777">7×7×7</option>
+        <option value="pyram">Pyraminx</option>
+        <option value="skewb">Skewb</option>
+      </select>
+
+      <select id="sessionSelect">
+        <option value="3x3">3x3 Session</option>
+        <option value="Practice">Practice</option>
+        <option value="Competition">Competition</option>
+      </select>
+    </div>
+
+    <div class="scramble-area">
+      <div class="scramble-label">CURRENT SCRAMBLE</div>
+      <div id="scramble" class="scramble">Loading...</div>
+      <button id="newScramble">↻ New scramble</button>
+    </div>
+
+    <div class="timer-container">
+      <div id="timerDisplay" class="timer-display">0.00</div>
+      <div id="timerHint" class="timer-hint">
+        Press SPACE or tap to start
+      </div>
+    </div>
+
+    <div class="timer-actions">
+      <button id="resetTimer">Reset</button>
+      <button id="manualEntry">Manual time</button>
+    </div>
+
+    <div class="last-solve">
+      <span>Last solve</span>
+      <strong id="lastSolve">--</strong>
+    </div>
+
+  </section>
+
+  <!-- STATISTICS -->
+  <section id="statistics" class="view">
+
+    <h1>Statistics</h1>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span>Solves</span>
+        <strong id="totalSolves">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Best</span>
+        <strong id="bestTime">--</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Mean</span>
+        <strong id="meanTime">--</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Average of 5</span>
+        <strong id="ao5">--</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Average of 12</span>
+        <strong id="ao12">--</strong>
+      </div>
+    </div>
+
+    <button id="exportCSV">Export CSV</button>
+    <button id="backupData">Download Backup</button>
+    <button id="importBackup">Import Backup</button>
+    <input type="file" id="backupFile" accept=".json" hidden>
+
+  </section>
+
+  <!-- HISTORY -->
+  <section id="history" class="view">
+
+    <h1>Solve History</h1>
+
+    <div class="history-controls">
+      <button id="clearHistory">Clear local history</button>
+    </div>
+
+    <div id="historyList" class="history-list">
+      No solves yet.
+    </div>
+
+  </section>
+
+  <!-- ALGORITHMS -->
+  <section id="algorithms" class="view">
+
+    <h1>OLL / PLL Algorithms</h1>
+
+    <div class="algorithm-controls">
+      <input
+        type="search"
+        id="algorithmSearch"
+        placeholder="Search algorithms..."
+      >
+
+      <select id="algorithmType">
+        <option value="ALL">All algorithms</option>
+        <option value="OLL">OLL</option>
+        <option value="PLL">PLL</option>
+      </select>
+
+      <select id="algorithmProgressFilter">
+        <option value="ALL">All progress</option>
+        <option value="LEARNED">Learned</option>
+        <option value="UNLEARNED">Not learned</option>
+      </select>
+    </div>
+
+    <div id="algorithmCount"></div>
+    <div id="algorithmList" class="algorithm-list">
+      Loading algorithms...
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ACCOUNT MODAL -->
+<div id="accountModal" class="modal hidden">
+  <div class="modal-content">
+
+    <button class="close-modal" id="closeAccount">×</button>
+
+    <h2>TurnForge Account</h2>
+
+    <input
+      id="emailInput"
+      type="email"
+      placeholder="Email address"
+    >
+
+    <input
+      id="passwordInput"
+      type="password"
+      placeholder="Password (minimum 8 characters)"
+    >
+
+    <button id="loginButton">Login</button>
+    <button id="registerButton">Create account</button>
+    <button id="logoutButton">Logout</button>
+
+    <p id="accountMessage"></p>
+
+  </div>
+</div>
+
+<script src="/app.js"></script>
+<script src="/algorithms.js"></script>
+
+</body>
+</html>
