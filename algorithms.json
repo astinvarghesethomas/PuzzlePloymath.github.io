@@ -1,0 +1,102 @@
+{
+  "OLL": [
+    {
+      "id": "OLL-1",
+      "name": "OLL 1",
+      "algorithm": "R U2 R2 F R F' U2 R' F R F'",
+      "category": "Dot"
+    },
+    {
+      "id": "OLL-2",
+      "name": "OLL 2",
+      "algorithm": "F R U R' U' F' f R U R' U' f'",
+      "category": "Dot"
+    },
+    {
+      "id": "OLL-3",
+      "name": "OLL 3",
+      "algorithm": "f R U R' U' f' U' F R U R' U' F'",
+      "category": "Dot"
+    },
+    {
+      "id": "OLL-4",
+      "name": "OLL 4",
+      "algorithm": "f R U R' U' f' U F R U R' U' F'",
+      "category": "Dot"
+    },
+    {
+      "id": "OLL-5",
+      "name": "OLL 5",
+      "algorithm": "r' U2 R U R' U r",
+      "category": "Square"
+    },
+    {
+      "id": "OLL-6",
+      "name": "OLL 6",
+      "algorithm": "r U2 R' U' R U' r'",
+      "category": "Square"
+    },
+    {
+      "id": "OLL-7",
+      "name": "OLL 7",
+      "algorithm": "r U R' U R U2 r'",
+      "category": "Square"
+    },
+    {
+      "id": "OLL-8",
+      "name": "OLL 8",
+      "algorithm": "r' U' R U' R' U2 r",
+      "category": "Square"
+    },
+    {
+      "id": "OLL-9",
+      "name": "OLL 9",
+      "algorithm": "R U R' U' R' F R2 U R' U' F'",
+      "category": "Fish"
+    },
+    {
+      "id": "OLL-10",
+      "name": "OLL 10",
+      "algorithm": "R U R' U R' F R F' R U2 R'",
+      "category": "Fish"
+    }
+  ],
+  "PLL": [
+    {
+      "id": "PLL-1",
+      "name": "Aa Perm",
+      "algorithm": "x R' U R' D2 R U' R' D2 R2 x'",
+      "category": "Corner"
+    },
+    {
+      "id": "PLL-2",
+      "name": "Ab Perm",
+      "algorithm": "x R2 D2 R U R' D2 R U' R x'",
+      "category": "Corner"
+    },
+    {
+      "id": "PLL-3",
+      "name": "Ua Perm",
+      "algorithm": "R U' R U R U R U' R' U' R2",
+      "category": "Edge"
+    },
+    {
+      "id": "PLL-4",
+      "name": "Ub Perm",
+      "algorithm": "R2 U R U R' U' R' U' R' U R'",
+      "category": "Edge"
+    },
+    {
+      "id": "PLL-5",
+      "name": "H Perm",
+      "algorithm": "M2 U M2 U2 M2 U M2",
+      "category": "Edge"
+    },
+    {
+      "id": "PLL-6",
+      "name": "Z Perm",
+      "algorithm": "M2 U M2 U M' U2 M2 U2 M' U2",
+      "category": "Edge"
+    }
+  ]
+}
