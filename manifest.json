@@ -1,0 +1,11 @@
+{
+  "name": "TurnForge Cube Timer",
+  "short_name": "TurnForge",
+  "description": "Offline speedcubing timer and algorithm trainer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#101014",
+  "theme_color": "#101014",
+  "orientation": "portrait",
+  "icons": []
+}
